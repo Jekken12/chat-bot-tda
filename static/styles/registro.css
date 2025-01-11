@@ -1,0 +1,57 @@
+/*REGISTRO------------------------------------------------------------------*/
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinea el contenido al inicio */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    max-width: 1200px; /* Limita el ancho máximo */
+    margin: 0 auto; /* Centra el contenedor */
+}
+  
+.form-container {
+    display: flex;
+    gap: 20px;
+    background-color: #c4c4c4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+  
+.login-form, .register-form {
+    width: 300px;
+}
+  
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+  
+form {
+    display: flex;
+    flex-direction: column;
+}
+  
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+  
+input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+  
+button {
+    padding: 10px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+button:hover {
+    background-color: #357ab8;
+}

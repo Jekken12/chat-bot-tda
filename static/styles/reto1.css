@@ -1,0 +1,98 @@
+.container {
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 500px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+h1 {
+    color: #333;
+}
+
+#grid {
+    display: grid;
+    gap: 8px;
+    margin: 20px auto;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;  /* Evita que se desborde */
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/* Ajuste de tamaño según dificultad */
+.cell {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+}
+
+@media (max-width: 500px) {
+    .cell {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+
+/* Ajuste dinámico según el tamaño de la cuadrícula */
+.grid-4 .cell {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+}
+
+.grid-5 .cell {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+}
+
+.grid-6 .cell {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+}
+
+.cell:hover {
+    background-color: #0056b3;
+}
+
+#message {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#restart {
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#restart:hover {
+    background: #218838;
+}
+
+#difficulty {
+    padding: 5px;
+    font-size: 14px;
+}

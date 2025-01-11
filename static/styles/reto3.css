@@ -1,0 +1,133 @@
+/* Contenedor principal */
+.container {
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Título */
+h1 {
+    font-size: 22px;
+    text-align: center;
+    color: #4caf50;
+    margin-bottom: 20px;
+}
+
+/* Contenedor del temporizador */
+.timer-container {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 20px 0;
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Barra de progreso */
+.progress-bar {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #76c7c0;
+    transition: width 1s linear;
+}
+
+/* Display del tiempo */
+#time-display {
+    position: relative;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+/* Controles */
+.controls button {
+    margin: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efecto hover de botones */
+.controls button:hover {
+    background-color: #388e3c;
+    transform: scale(1.05);
+}
+
+/* Botón deshabilitado */
+.controls button:disabled {
+    background-color: #bdbdbd;
+    cursor: not-allowed;
+}
+
+/* Contenedor de configuración */
+.settings {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+/* Recuadros de tiempo */
+.settings input[type="number"] {
+    width: 70px;
+    padding: 8px;
+    font-size: 1.2rem;
+    text-align: center;
+    border: 2px solid #4caf50;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Cambio de color en los inputs */
+.settings input[type="number"]:focus {
+    border-color: #388e3c;
+}
+
+/* Texto de estado */
+#status-text {
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+    color: #4caf50;
+}
+
+/* Texto de recompensa */
+#reward-text {
+    font-size: 16px;
+    color: green;
+    text-align: center;
+}
+
+/* Modo nocturno */
+body.night-mode {
+    background-color: #121212;
+    color: white;
+}
+
+/* Botón de modo nocturno */
+button.night-mode-btn {
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+}
+
+/* Efecto hover en modo nocturno */
+button.night-mode-btn:hover {
+    background-color: #555;
+}

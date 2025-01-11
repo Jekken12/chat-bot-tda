@@ -1,0 +1,55 @@
+h1 {
+    margin: 0;
+}
+
+.imagen-articulo {
+    max-width: 50%;
+    height: auto;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.autor {
+    font-style: italic;
+}
+
+section {
+    margin: 20 px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Evita que elementos internos la desborden */
+    overflow-y: auto; /* Permite el desplazamiento vertical */
+
+}
+
+h2 {
+    color: #6a0dad; /* Morado */
+}
+
+.Inicio {
+    border-left: 5px solid #6a0dad; /* Morado */
+    padding-left: 10px;
+    overflow: hidden; /* Evita que elementos internos la desborden */
+    overflow-y: auto; /* Permite el desplazamiento vertical */
+    text-align: left;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #6a0dad; /* Morado */
+    color: white;
+}
+

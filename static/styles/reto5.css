@@ -1,0 +1,44 @@
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 25px;
+    background: rgb(225, 226, 156);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#timer {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+#motivation-message {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#progress-bar {
+    width: 100%;
+    background-color: #f3f3f3;
+    margin: 20px 0;
+}
+
+#progress {
+    height: 20px;
+    background-color: #4caf50;
+    width: 100%; /* Inicialmente lleno */
+}

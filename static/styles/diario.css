@@ -1,0 +1,75 @@
+/*DIARIO-------------------------------------------*/
+
+/* Contenedor principal */
+.container-diario {
+    display: flex;
+    width: 80%;
+    max-width: 900px;
+    background: rgb(197, 145, 228);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+  /* Sección de la imagen */
+.image-diario {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff; /* Color de fondo personalizable */
+}
+
+.imagen-diario-1 {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+  /* Sección del formulario */
+.form-section-diario {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+  /* Estilos del formulario */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+  /* Caja de comentarios con scroll si el contenido es demasiado grande */
+textarea {
+    height: 100px;
+    resize: none;
+    overflow-y: auto;
+}
+
+  /* Botón de enviar */
+button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #673ab7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #512da8;
+}
