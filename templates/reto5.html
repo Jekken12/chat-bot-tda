@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Evaluaciones</title>
+<link rel="shortcut icon" href="static/img/mhcicon.png" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/reto5.css') }}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+
+<!-- Cabecera -->
+<header>
+    <div class="logo">
+    <a href="http://127.0.0.1:5000/">
+        <img src="static/img/Atenia-logo.png" alt="Logo Atenia">
+    </a>
+    </div>
+    <nav>
+    <ul>
+        <li><a href="registro">Inicio de sesión</a></li>
+        <li><a href="test">Test</a></li>
+        <li class="dropdown">
+        <a href="#">Retos</a>
+        <ul class="dropdown-menu">
+            <li><a href="reto1">Reto 1</a></li>
+            <li><a href="reto2">Reto 2</a></li>
+            <li><a href="reto3">Reto 3</a></li>
+            <li><a href="reto4">Reto 4</a></li>
+            <li><a href="reto5">Reto 5</a></li>
+        </ul>
+        </li>
+        <li><a href="diario">Diario del día</a></li>
+        <li><a href="articulos">Artículos</a></li>
+    </ul>
+    </nav>
+</header>
+
+<!-- Cuerpo -->
+<div class="main-TDA">
+        <body>
+                <div class="container">
+                    <h1>Evaluaciones rapidas</h1>
+                    <div id="difficulty-selection">
+                        <h2>Selecciona la dificultad:</h2>
+                        <button onclick="startGame('easy')">Fácil</button>
+                        <button onclick="startGame('medium')">Medio</button>
+                        <button onclick="startGame('hard')">Difícil</button>
+                    </div>
+                    <div id="game-area" style="display: none;">
+                        <h2 id="paragraph-title"></h2>
+                        <div id="progress-bar">
+                            <div id="progress"></div>
+                        </div>
+                        <p id="paragraph"></p>
+                        <button id="finish-reading" style="display: none;" onclick="finishReading()">Terminar lectura</button>
+                        <div id="timer"></div>
+                        <div id="questions" style="display: none;">
+                            <h2>Responde las siguientes preguntas:</h2>
+                            <div id="question-container"></div>
+                            <button onclick="finishAnswering()">Terminar respuestas</button>
+                            <div id="answer-container"></div>
+                        </div>
+                        <div id="score-input" style="display: none;">
+                            <h2>Ingresa cuántas preguntas contestaste correctamente:</h2>
+                            <input type="number" id="score" min="0" max="3" />
+                            <button onclick="showMotivationalMessage()">Enviar</button>
+                            <div id="motivation-message"></div>
+                        </div>
+                        <button id="restart-button" style="display: none;" onclick="restartGame()">Reiniciar Juego</button>
+                    </div>
+                </div>
+                <script src="{{ url_for('static', filename='js/reto5.js') }}"></script>
+        </body>
+    </div>
+
+<!-- Pie de página -->
+    <footer>
+        <div class="footer-content">
+        <div class="footer-item">
+            <p><strong>Nombre integrantes:</strong><br> Chasiluisa Santillan Domenica Michelle <br> Guerrero Auquilla John Dereck <br> Lloacana Llugsa Katerin Karina</p>
+            <p><strong>Número de teléfono:</strong> 0987446810 </p>
+        </div>
+        <div class="footer-item">
+            <p><strong>Nombre psicólogo:</strong><br>
+            <a href="static/archivos/psicologo.pdf" target="_blank">Auquilla Patiño Ana Lucia</a>
+            </p>
+            
+            <p><strong>Número de teléfono:</strong> 0982525749 </p>
+        </div>
+        <div class="footer-item">
+            <p><strong>Institucion:</strong><br> Universidad de las Fuerzas Armadas-ESPE</p>
+        </div>
+        </div>
+    </footer>
+
+<!-- Chatbot -->
+<div id="chatbot" class="main-card collapsed">
+    <button id="chatbot_toggle">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M15 4v7H5.17l-.59.59-.58.58V4h11m1-2H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm5 4h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5  6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+    </button>
+    <div class="main-title">
+    <span>Psicologo Atenia</span>
+    </div>
+    <main class="msger-chat">
+    <div class="msg left-msg">
+        <div class="msg-bubble">
+        <div class="msg-info">
+            <div class="msg-info-name">Psicologo Atenia</div>
+            <div class="msg-info-time"><time id="clock"></time></div>
+        </div>
+        <div class="msg-text">
+            Hola mucho gusto me presento soy Atenia, soy un Bot entrenado para ayudarte a reducir tu nivel de TDA mediante varios retos que tenemos en nuestra plataforma así que te invito a revisar estos retos y si tienes alguna duda no dudes en decírmelo : ).
+        </div>
+        </div>
+    </div>
+    </main>
+    <form class="msger-inputarea">
+    <input type="text" class="msger-input" id="textInput" placeholder="Escribe tu mensaje...">
+    <button type="submit" class="msger-send-btn">Enviar</button>
+    </form>
+</div>
+
+<script src='https://use.fontawesome.com/releases/v5.0.13/js/all.js'></script>
+<script src="{{ url_for('static', filename='js/bot.js') }}"></script>
+</body>
+</html>

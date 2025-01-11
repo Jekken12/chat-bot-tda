@@ -1,0 +1,143 @@
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <title>Atenia</title>
+    <link rel="shortcut icon" href="static/img/mhcicon.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/registro.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+    <body>
+
+    <!-- Cabecera -->
+    <header>
+        <div class="logo">
+        <a href="http://127.0.0.1:5000/">
+            <img src="static/img/Atenia-logo.png" alt="Logo Atenia">
+        </a>
+        </div>
+        <nav>
+        <ul>
+            <li><a href="registro">Inicio de sesión</a></li>
+            <li><a href="test">Test</a></li>
+            <li class="dropdown">
+            <a href="#">Retos</a>
+            <ul class="dropdown-menu">
+                <li><a href="reto1">Reto 1</a></li>
+                <li><a href="reto2">Reto 2</a></li>
+                <li><a href="reto3">Reto 3</a></li>
+                <li><a href="reto4">Reto 4</a></li>
+                <li><a href="reto5">Reto 5</a></li>
+            </ul>
+            </li>
+            <li><a href="diario">Diario del día</a></li>
+            <li><a href="articulos">Artículos</a></li>
+        </ul>
+        </nav>
+    </header>
+<!-- Cuerpo principal -->
+<div class="main-TDA">
+    <div class="container">
+        <div class="form-container">
+            <!-- Mensajes de Flash -->
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <ul class="flashes">
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
+
+            <!-- Formulario de Inicio de Sesión -->
+            <section class="login-form">
+                <h2>Iniciar Sesión</h2>
+                <form action="/login" method="POST">
+                    <label for="login-username">Usuario:</label>
+                    <input type="text" id="login-username" name="username" required>
+                    
+                    <label for="login-password">Contraseña:</label>
+                    <input type="password" id="login-password" name="password" required>
+                    
+                    <button type="submit">Iniciar Sesión</button>
+                </form>
+            </section>
+
+            <!-- Formulario de Registro -->
+            <section class="register-form">
+                <h2>Registro</h2>
+                <form action="/registro" method="POST">
+                    <label for="register-username">Usuario:</label>
+                    <input type="text" id="register-username" name="username" required>
+                    
+                    <label for="register-email">Correo Electrónico:</label>
+                    <input type="email" id="register-email" name="email" required>
+                    
+                    <label for="register-password">Contraseña:</label>
+                    <input type="password" id="register-password" name="password" required>
+                    
+                    <label for="register-password-confirm">Confirmar Contraseña:</label>
+                    <input type="password" id="register-password-confirm" name="password_confirm" required>
+                    
+                    <button type="submit">Crear Cuenta</button>
+                </form>
+            </section>
+        </div>
+    </div>
+</div>
+    <!-- Pie de página -->
+        <footer>
+            <div class="footer-content">
+            <div class="footer-item">
+                <p><strong>Nombre integrantes:</strong><br> Chasiluisa Santillan Domenica Michelle <br> Guerrero Auquilla John Dereck <br> Lloacana Llugsa Katerin Karina</p>
+                <p><strong>Número de teléfono:</strong> 0987446810 </p>
+            </div>
+            <div class="footer-item">
+                <p><strong>Nombre psicólogo:</strong><br>
+                <a href="static/archivos/psicologo.pdf" target="_blank">Auquilla Patiño Ana Lucia</a>
+                </p>
+                
+                <p><strong>Número de teléfono:</strong> 0982525749 </p>
+            </div>
+            <div class="footer-item">
+                <p><strong>Institucion:</strong><br> Universidad de las Fuerzas Armadas-ESPE</p>
+            </div>
+            </div>
+        </footer>
+
+    <!-- Chatbot -->
+    <div id="chatbot" class="main-card collapsed">
+        <button id="chatbot_toggle">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M15 4v7H5.17l-.59.59-.58.58V4h11m1-2H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm5 4h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5  6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+        <div class="main-title">
+        <span>Psicologo Atenia</span>
+        </div>
+        <main class="msger-chat">
+        <div class="msg left-msg">
+            <div class="msg-bubble">
+            <div class="msg-info">
+                <div class="msg-info-name">Psicologo Atenia</div>
+                <div class="msg-info-time"><time id="clock"></time></div>
+            </div>
+            <div class="msg-text">
+                Hola mucho gusto me presento soy Atenia, soy un Bot entrenado para ayudarte a reducir tu nivel de TDA mediante varios retos que tenemos en nuestra plataforma así que te invito a revisar estos retos y si tienes alguna duda no dudes en decírmelo : ).
+            </div>
+            </div>
+        </div>
+        </main>
+        <form class="msger-inputarea">
+        <input type="text" class="msger-input" id="textInput" placeholder="Escribe tu mensaje...">
+        <button type="submit" class="msger-send-btn">Enviar</button>
+        </form>
+    </div>
+
+    <script src='https://use.fontawesome.com/releases/v5.0.13/js/all.js'></script>
+    <script src="{{ url_for('static', filename='js/bot.js') }}"></script>
+    </body>
+    </html>
+
