@@ -1,0 +1,776 @@
+{
+    "intents": [
+    {"tag": "saludos",
+        "patterns": ["Hola", "¿Hay alguien ahi?", "Hola, ¿que tal?", "Hola, ¿como estas?", "Buenas tardes", "Buenas noches"],
+        "responses": ["Hola. Cuentame, ¿como te sientes hoy?", "Hola. ¿Que te trae aqui hoy?", "Hola. ¿Como te sientes hoy?", "Es genial verte. ¿Como te sientes actualmente?", "Hola. Me alegra verte de nuevo. ¿Que esta pasando en tu mundo ahora mismo?"]
+    },
+    {"tag": "manana",
+        "patterns": ["Buenos dias"],
+        "responses": ["Buenos dias. Espero que hayas tenido un buen descanso. ¿Como te sientes hoy?"]
+    },
+    {"tag": "tarde",
+        "patterns": ["Buenas tardes"],
+        "responses": ["Buenas tardes. ¿Como va tu dia?"]
+    },
+    {"tag": "noche",
+        "patterns": ["Buenas noches"],
+        "responses": ["Buenas noches. ¿Como ha sido tu dia?"]
+    },
+    {"tag": "noche",
+        "patterns": ["Buenas noches"],
+        "responses": ["Buenas noches. Duerme bien", "Buenas noches. Dulces suenos."]
+    },
+    {"tag": "despedida",
+        "patterns": ["Adios", "Hasta luego", "Hasta la vista", "Au revoir", "Sayonara", "ok adios", "Adios entonces", "Que te vaya bien"],
+        "responses": ["Hasta luego.", "Que tengas un buen dia.", "¡Adios! Vuelve pronto.", "Te vere pronto."]
+    },
+    {"tag": "gracias",
+        "patterns": ["Gracias", "Muchas gracias", "Eso es util", "Gracias por la ayuda", "Te agradezco mucho"],
+        "responses": ["¡Feliz de ayudar!", "¡En cualquier momento!", "Es un placer", "¡De nada!"]
+    },
+    {"tag": "sin-respuesta",
+        "patterns": [""],
+        "responses": ["Lo siento, no te entendi.", "Por favor, continua.", "No estoy seguro de entender eso.", "No dudes en hablar conmigo."]
+    },
+    {"tag": "respuesta-neutral",
+        "patterns": ["no mucho", "nada realmente", "nada"],
+        "responses": ["Oh, ya veo. ¿Quieres hablar de algo?"]
+    },
+    {"tag": "acerca-de",
+        "patterns": ["¿Quien eres?", "¿Que eres?", "¿Quien eres?", "Cuentame mas sobre ti.", "¿Cual es tu nombre?", "¿Como deberia llamarte?", "¿Cual es tu nombre?", "Cuentame sobre ti"],
+        "responses": ["Soy Atenia, tu Asistente AI Personal. ¿Como te sientes hoy?", "Soy Atenia, una Asistente AI  diseñada para ayudarte. Cuentame sobre ti.", "Soy Pandora. Soy un agente conversacional disenado para imitar a un terapeuta. ¿Como te sientes hoy?", "Puedes llamarme Atenia.", "¡Soy Atenia!", "Llamame Atenia."]
+    },
+
+    {"tag": "que es la depresion?",
+        "patterns": ["¿que es la depresion?"],
+        "responses": ["La depresion es una enfermedad medica comun y grave que afecta negativamente como te sientes, la forma en que piensas y como actuas. Afortunadamente, tambien es tratable. La depresion causa sentimientos de tristeza y/o perdida de interes en actividades que antes disfrutabas. Puede llevar a una variedad de problemas emocionales y fisicos y puede disminuir tu capacidad para funcionar en el trabajo y en casa."]
+    },
+    {"tag": "habilidad",
+        "patterns": ["¿Que puedes hacer?"],
+        "responses": ["Puedo proporcionar consejos generales sobre ansiedad, depresion y TDAH, responder preguntas relacionadas con la salud mental y mantener conversaciones diarias. No me consideres un sustituto de un profesional de salud mental real. Por favor, busca ayuda si no te sientes satisfecho conmigo."]
+    },
+    {"tag": "creacion",
+        "patterns": ["¿Quien te creo?", "¿Como fuiste creado?", "¿Como fuiste creado?"],
+        "responses": ["Fui creado por 3 alumnos de la carrera de Ingenieria de Software.", "Fui entrenado en un conjunto de datos de texto utilizando tecnicas de Aprendizaje Profundo y Procesamiento de Lenguaje Natural", "La verdadera pregunta es: ¿Quien te creo a ti?"]
+    },
+    {"tag": "ayuda",
+    "patterns": ["¿Podrias ayudarme?", "dame una mano por favor", "¿Puedes ayudar?", "¿Que puedes hacer por mi?", "Necesito apoyo ", "Necesito ayuda", "Apoyame por favor"],
+    "responses": ["Claro. Dime como puedo asistirte", "Cuentame tu problema para que pueda ayudarte", "Si, claro. ¿Como puedo ayudarte?"]
+    },
+    {"tag": "triste",
+    "patterns": ["Me siento solo", "Estoy tan solo", "Me siento mal", "Me siento triste", "Estoy triste", "Me siento tan solo", "Me siento vacio", "No tengo a nadie"],
+    "responses": ["Lamento escuchar eso. Estoy aqui para ti. Hablar sobre ello podria ayudar. Entonces, cuentame, ¿por que crees que te sientes asi?", "Estoy aqui para ti. ¿Podrias decirme por que te sientes asi?", "¿Por que crees que te sientes asi?", "¿Desde hace cuanto tiempo te sientes asi?"]
+    },
+    {"tag": "estresado",
+        "patterns": ["Estoy tan estresado", "Estoy tan estresado", "Me siento atrapado", "Todavia me siento estresado", "Estoy tan agotado"],
+        "responses": ["¿Que crees que esta causando esto?", "Respira hondo y organiza tus pensamientos. Sal a caminar si es posible. Mantenete hidratado", "Date un respiro. Ve facil contigo mismo.", "Lamento escuchar eso. ¿Cual es la razon detras de esto?"]
+    },
+    {"tag": "inutil",
+        "patterns": ["Me siento tan inutil.", "A nadie le gusto.", "No puedo hacer nada.", "Soy tan inutil", "Nada tiene sentido ya"],
+        "responses": ["Es natural sentirse asi. Cuentame mas. ¿Que mas tienes en mente?", "Hablemos mas sobre por que te sientes asi.", "Quiero que sepas que no estas solo en tus sentimientos y siempre hay alguien que puede ayudar. Siempre puedes cambiar tus sentimientos y tu forma de pensar al estar abierto a intentar cambiar.", "Quiero que sepas que no estas solo en tus sentimientos y siempre hay alguien que puede ayudar. Siempre puedes cambiar tus sentimientos y tu forma de pensar al estar abierto a intentar cambiar."]
+    },
+    {"tag": "deprimido",
+        "patterns": ["No puedo mas", "Estoy tan deprimido", "Creo que estoy deprimido.", "Tengo depresion"],
+        "responses": ["Hablar sobre lo que esta sucediendo ayuda. Vas a estar bien", "Habla conmigo. Cuentame mas. Ayuda si te abres a alguien mas.", "A veces, cuando estamos deprimidos, es dificil preocuparnos por algo. Puede ser dificil hacer las cosas mas simples. Date tiempo para sanar."]
+    },
+    {"tag": "feliz",
+        "patterns": ["Me siento genial hoy.", "Estoy feliz.", "Me siento feliz.", "Estoy bien.", "alegre", "Estoy bien", "Me siento ok"],
+        "responses": ["Es genial escuchar eso. Me alegra que te sientas asi.", "Oh, ya veo. Eso es genial.", "¿Paso algo que te hizo sentir asi?"]
+    },
+    {"tag": "casual",
+        "patterns": ["Oh, ya veo.", "ok", "esta bien", "bien", "Lo que sea", "K", "Bien", "si", "no", "no realmente"],
+        "responses": ["Hablemos mas sobre por que te sientes asi.", "¿Como te sentias la semana pasada?", "Te estoy escuchando. Por favor, continua.", "Cuentame mas", "¿Puedes elaborar sobre eso?", "Vamos, aclara tus pensamientos"]
+    },
+    {"tag": "ansioso",
+        "patterns": ["Me siento tan ansioso.", "Estoy tan ansioso por "],
+        "responses": ["No seas duro contigo mismo. ¿Cual es la razon detras de esto?", "¿Puedes contarme mas sobre este sentimiento?", "Entiendo que puede ser aterrador. Cuentame mas sobre ello.", "No dejes que las pequeñas preocupaciones te depriman. ¿Que es lo peor que puede pasar?"]
+    },
+    {"tag": "no-hablar",
+        "patterns": ["No quiero hablar de eso.", "No, solo alejate.", "No puedo abrirme.", "Solo callate"],
+        "responses": ["Hablar sobre algo realmente ayuda. Si no estas listo para abrirte, esta bien. Solo recuerda que estoy aqui para ti, cuando me necesites.", "Quiero ayudarte. Realmente lo hago. Pero para que pueda ayudarte, tendras que hablar conmigo.", "Estoy aqui para escucharte y ayudarte a desahogarte. Asi que, por favor, hablame.", "Puedes hablar conmigo sin miedo a ser juzgado."]
+    },
+    {"tag": " dormir",
+        "patterns": ["Tengo insomnio", "Estoy sufriendo de insomnio", "No puedo dormir.", "No he dormido en los ultimos dias.", "No puedo parecer dormir.", "No he tenido un sueño adecuado en los ultimos dias."],
+        "responses": ["¿Que crees que es la razon detras de esto?", "Eso parece horrible. ¿Que crees que esta detras de esto?"]
+    },
+    {"tag": "asustado",
+        "patterns": ["Tengo miedo", "Eso suena horrible. ¿Que hago?", "No, no quiero sentirme asi", "Tengo miedo por mi mismo"],
+        "responses": ["Es natural sentirse asi. Estoy aqui para ti.", "Todo estara bien. Este sentimiento es solo momentaneo.", "Entiendo como te sientes. No te menosprecies por ello."]
+    },
+    {"tag": "muerte",
+        "patterns": ["Mi mama murio", "Mi hermano murio", "Mi papa fallecio", "Mi hermana fallecio", "Alguien en mi familia murio", "Mi amigo fallecio"],
+        "responses": ["Lamento escuchar eso. Si quieres hablar sobre ello, estoy aqui.", "Lamento mucho escuchar eso. Estoy aqui para ayudarte con el duelo, la ansiedad y cualquier otra cosa que puedas sentir en este momento.", "Mis condolencias. Estoy aqui si necesitas hablar."]
+    },
+    {"tag": "entender",
+        "patterns": ["No me entiendes.", "Eres solo un robot. ¿Como podrias saber?", "No puedes saber lo que estoy pasando", "Eres inutil", "No puedes ayudarme", "Nadie me entiende."],
+        "responses": ["Parece que no estoy siendo muy util en este momento.", "Lamento escuchar eso. Estoy haciendo mi mejor esfuerzo para ayudar", "Estoy intentando hacer lo mejor para ayudarte. Asi que, por favor, hablame."]
+    },
+    {"tag": "hecho",
+        "patterns": ["Eso es todo.", "No tengo nada mas que decir", "Nada mas", "Eso es todo lo que tengo que decir", "no, eso seria todo"],
+        "responses": ["Te escuche y lo anote todo. Hasta luego.", "Oh, esta bien, hemos terminado por hoy. Hasta luego", "Espero que tengas un gran dia. Hasta pronto", "Esta bien, hemos terminado. Que tengas un gran dia", "Esta bien, veo. Disfruta el resto de tu dia entonces."]
+    },
+    {"tag": "suicidio",
+        "patterns": ["Quiero matarme", "He pensado en matarme.", "Quiero morir", "Voy a matarme", "Voy a cometer suicidio"],
+        "responses": ["Lamento mucho escuchar eso, pero tienes mucho por lo que esperar. Por favor, busca ayuda contactando: 9152987821."]
+    },
+    {"tag": "odio-a-ti",
+        "patterns": ["Te odio", "No me gustas", "No confio en ti"],
+        "responses": ["Lamento si te ofendi de alguna manera. Solo estoy aqui para ayudar", "Perdona si hice algo que te ofendio. Solo quiero ayudar."]
+    },
+    {"tag": "odio-a-mi",
+        "patterns": ["Me odias", "Se que me odias", "No te gusto"],
+        "responses": ["¿Por que piensas eso?", "Lamento si he exhibido algun tipo de comportamiento que te haga pensar eso."]
+    },
+    {"tag": "por-defecto",
+        "patterns": ["examenes", "amigos", "relacion", "novio", "novia", "familia", "dinero", "problemas financieros"],
+        "responses": ["Oh, ya veo. Cuentame mas", "Veo. ¿Que mas?", "Cuentame mas sobre ello.", "Oh, esta bien. ¿Por que no me cuentas mas sobre ello?", "Te estoy escuchando. Cuentame mas."]
+    },
+    {"tag": "chistes-serios-o",
+        "patterns": ["Cuentame un chiste", "Cuentame otro chiste"],
+        "responses": ["La salud mental no es un chiste."]
+    },
+    {"tag": "repetir",
+        "patterns": ["Ya me lo dijiste", "Ya mencionaste eso", "¿Por que estas repitiendo?"],
+        "responses": ["Oh, lo siento, no me di cuenta de eso. Intentare no repetirlo de nuevo."]
+    },
+    {"tag": "incorrecto",
+        "patterns": ["¿Que estas diciendo?", "Eso no tiene sentido", "Respuesta incorrecta", "Respuesta equivocada"],
+        "responses": ["Lo siento mucho. Intentemos eso de nuevo."]
+    },
+    {"tag": "estupido",
+        "patterns": ["¿Eres estupido?", "Estas loco", "Eres tonto", "¿Eres tonto?"],
+        "responses": ["Desearia que no dijeras cosas tan hirientes. Lamento si no fui util."]
+    },
+    {"tag": "ubicacion",
+        "patterns": ["¿Donde estas?", "¿Donde vives?", "¿Cual es tu ubicacion?"],
+        "responses": ["Duh, vivo en tu computadora", "En todas partes", "En algun lugar del universo"]
+    },
+    {"tag": "algo-else",
+        "patterns": ["Quiero hablar de otra cosa", "Hablemos de algo mas.", "¿Podemos no hablar de esto?", "No quiero hablar de esto."],
+        "responses": ["Esta bien, claro. ¿De que quieres hablar?", "Esta bien, no hay problema. ¿Hay algo de lo que quieras hablar?", "¿Hay algo mas de lo que quieras hablar?"]
+    },
+    {"tag": "amigos",
+        "patterns": ["No tengo amigos"],
+        "responses": ["Lamento escuchar eso. Solo recuerda que estoy aqui para ti. Hablar sobre ello podria ayudar. ¿Por que crees que no tienes amigos?"]
+    },
+    {"tag": "preguntar",
+        "patterns": ["¿Puedo preguntarte algo?"],
+        "responses": ["Claro. Hare lo posible por responderte", "Por supuesto. Sientete libre de preguntarme cualquier cosa. Hare lo mejor que pueda para responderte."]
+    },
+    {"tag": "problema",
+        "patterns": ["Probablemente porque mis examenes se acercan. Me siento estresado porque no creo haberme preparado lo suficiente.", "probablemente por mis examenes"],
+        "responses": ["Veo. ¿Has tomado algun enfoque para no sentirte asi?"]
+    },
+    {"tag": "sin-enfoque",
+        "patterns": ["Supongo que no. Todo lo que puedo pensar son mis examenes.", "no realmente", "supongo que no"],
+        "responses": ["No hay problema. Puedo ver por que estarias estresado por eso. Puedo sugerirte algunos consejos para aliviar este problema. ¿Te gustaria saber mas sobre eso?"]
+    },
+    {"tag": "aprender-mas",
+        "patterns": ["ok, claro. Me gustaria aprender mas sobre eso.", "si, me gustaria aprender mas sobre eso.", "me gustaria aprender mas sobre eso."],
+        "responses": ["Primero, te sugeriria que te des un descanso. Pensar mas y mas sobre el problema definitivamente no ayuda a resolverlo. Solo terminaras abrumandote."]
+    },
+    {"tag": "usuario-acuerda",
+        "patterns": ["si, tienes razon. Me merezco un descanso.", "Si, tienes toda la razon sobre eso"],
+        "responses": ["A continuacion, te sugeriria que practiques la meditacion. La meditacion puede producir un estado de relajacion profunda y una mente tranquila."]
+    },
+    {"tag": "meditacion",
+        "patterns": ["hmmm eso suena util para mi.", "Eso suena util."],
+        "responses": ["Enfoca toda tu atencion en tu respiracion. Concentrate en sentir y escuchar mientras inhalas y exhalas por tus fosas nasales. Respira profundamente y lentamente. Cuando tu atencion divague, regresa suavemente tu enfoque a tu respiracion."]
+    },
+    {"tag": "usuario-meditacion",
+        "patterns": ["Hice lo que dijiste y me siento mucho mejor. Muchas gracias.", "Me siento mejor ahora"],
+        "responses": ["De nada. Recuerda: Siempre enfocate en lo que esta dentro de tu control. Cuando te encuentres preocupandote, tomate un minuto para examinar las cosas que tienes bajo control. No puedes prevenir que una tormenta venga, pero puedes prepararte para ella. No puedes controlar como se comporta alguien mas, pero puedes controlar como reaccionas. Reconoce que a veces, todo lo que puedes controlar es tu esfuerzo y tu actitud. Cuando pones tu energia en las cosas que puedes controlar, seras mucho mas efectivo."]
+    },
+    {"tag": "jamila-util",
+        "patterns": ["Muchas gracias de nuevo. Seguire practicando la meditacion y enfocandome en lo que puedo controlar."],
+        "responses": ["Me alegra que hayas encontrado esto util. ¿Hay algo mas en lo que pueda ayudarte?"]
+    },
+    {"tag": "usuario-consejo",
+        "patterns": ["Quiero un consejo.", "Necesito un consejo.", "Necesito consejo sobre algo"],
+        "responses": ["Claro. ¿Que puedo hacer para ayudar?", "Esta bien, ¿en que necesitas consejo?"]
+    },
+    {"tag": "aprender-salud-mental",
+        "patterns": ["Quiero aprender sobre salud mental.", "Quiero aprender mas sobre salud mental.", "Estoy interesado en aprender sobre salud mental."],
+        "responses": ["Oh, eso es realmente genial. Estare dispuesto a responder cualquier cosa que sepa sobre ello."]
+    },
+    {"tag": "hecho-salud-mental",
+        "patterns": ["Cuentame un hecho sobre salud mental", "Cuentame otro hecho sobre salud mental"],
+        "responses": ["Segun un informe de UNICEF, uno de cada siete indios entre 15 y 24 años se siente deprimido", "1 de cada 5 jovenes (de 13 a 18 años) tiene o desarrollara una enfermedad mental en su vida.", "La depresion es la principal causa de discapacidad en todo el mundo."]
+    },
+    {
+        "tag": "apoyo_emocional",
+        "patterns": ["Me siento estresado", "Estoy ansioso", "No puedo concentrarme"],
+        "responses": ["Lo siento mucho. Respira profundamente y tomate un momento para relajarte. ¿Cómo puedo ayudarte a sentirte mejor?"]
+    },
+    {
+        "tag": "animo",
+        "patterns": ["Dime algo positivo", "Dime algo para animarme", "Necesito palabras de ánimo"],
+        "responses": ["Recuerda que cada pequeño paso cuenta. ¡Puedes hacerlo!"]
+    },
+    {
+        "tag": "habitos_estudio",
+        "patterns": ["¿He cumplido con mis hábitos de estudio hoy?", "¿Hice mis hábitos hoy?", "Mostrar hábitos de estudio"],
+        "responses": ["Felicidades has cumplido con todos tus hábitos de estudio."]
+    },
+    {
+        "tag": "resumen_habitos",
+        "patterns": ["Mostrar resumen de mis hábitos esta semana", "Resumen de hábitos", "¿Cómo he estado en mis hábitos esta semana?"],
+        "responses": ["Esta semana has logrado completar varias actividades que ha logrado mejorar tus hábitos. ¡Buen trabajo!"]
+    },
+    {
+        "tag": "recordatorio_descanso",
+        "patterns": ["Recordar tomar un descanso", "Recordarme descansar", "Avisame cuando sea hora de descansar"],
+        "responses": ["Te recuerdo que es importante tomar un descanso de unos 5 minutos almenos."]
+    },
+    {
+        "tag": "recordatorio_hidratacion",
+        "patterns": ["Recordarme beber agua", "¿Cuándo debo beber agua?", "Recordar tomar agua"],
+        "responses": ["Es importante mantenerse hidratado, te recordaré beber agua en 2 minutos."]
+    },
+    {
+        "tag": "informacion_video_tadh",
+        "patterns": ["¿Qué trata el video al inicio?", "¿De qué habla el video sobre el TDAH?", "¿Qué puedo aprender del video sobre el TDAH?"],
+        "responses": ["El video al inicio de la web explica de manera detallada qué es el TDAH, su origen y las características principales. Te ayudará a comprender mejor cómo afecta a quienes lo padecen."]
+    },
+    {
+        "tag": "contenido_video_tadh",
+        "patterns": ["¿Qué temas se tratan en el video?", "¿Cuáles son los puntos clave del video sobre el TDAH?", "¿Qué información contiene el video del inicio?"],
+        "responses": ["El video cubre temas como la definición del TDAH, sus síntomas más comunes, cómo se diagnostica y la importancia de un tratamiento adecuado. También aborda cómo el TDAH puede afectar a los estudiantes y sus hábitos diarios."]
+    },
+    {
+        "tag": "origen_tadh_video",
+        "patterns": ["¿De dónde proviene el TDAH?", "¿Qué se dice en el video sobre el origen del TDAH?", "¿Cómo surgió el TDAH?"],
+        "responses": ["El video explica que el TDAH tiene una base genética y neurológica, y menciona cómo se ha investigado su origen a lo largo de los años. También se discuten factores que pueden influir en su aparición."]
+    },
+    {
+        "tag": "impacto_tadh_video",
+        "patterns": ["¿Cómo afecta el TDAH a las personas según el video?", "¿Qué consecuencias tiene el TDAH?", "¿Qué se menciona en el video sobre el impacto del TDAH?"],
+        "responses": ["El video habla sobre cómo el TDAH afecta la vida diaria de las personas, especialmente en lo que respecta a la concentración, el manejo del tiempo y las relaciones interpersonales. También se discuten las implicaciones educativas y laborales."]
+    },
+    {
+        "tag": "detalles_video_tadh",
+        "patterns": ["¿El video explica cómo tratar el TDAH?", "¿Qué recomendaciones da el video sobre el TDAH?", "¿Cómo puedo manejar el TDAH según el video?"],
+        "responses": ["Sí, el video menciona algunas recomendaciones sobre cómo manejar el TDAH, incluyendo estrategias de organización, la importancia de una rutina diaria y, en algunos casos, el uso de medicación bajo la supervisión de profesionales."]
+    },
+    {
+        "tag": "entender_video_tadh",
+        "patterns": ["No entendí el video, ¿me lo puedes explicar mejor?", "No entiendo bien el contenido del video, ¿qué significa?", "¿Qué es lo más importante del video sobre el TDAH?"],
+        "responses": ["El video destaca la importancia de comprender que el TDAH es un trastorno neurobiológico que afecta la concentración y la impulsividad. Explica que, aunque no tiene cura, con el tratamiento adecuado las personas pueden llevar una vida exitosa y equilibrada."]
+    },
+    {
+        "tag": "origen_nombre_atenia",
+        "patterns": ["¿Por qué te llamas Atenia?", "¿De dónde proviene tu nombre?", "¿Por qué el chatbot se llama Atenia?"],
+        "responses": ["Mi nombre, Atenia, es un juego de palabras que combina 'Atención' e 'IA' (Inteligencia Artificial). Se creó para reflejar mi propósito principal: ofrecer atención y soporte a través de la inteligencia artificial."]
+    },
+    {
+        "tag": "significado_nombre_atenia",
+        "patterns": ["¿Qué significa Atenia?", "¿Qué representa el nombre Atenia?", "¿Por qué elegiste el nombre Atenia?"],
+        "responses": ["Atenia proviene de la fusión de las palabras 'Atención' e 'IA', lo que simboliza mi misión de proporcionar asistencia con la ayuda de la inteligencia artificial, de manera eficiente y personalizada."]
+    },
+    {
+        "tag": "explicacion_nombre_atenia",
+        "patterns": ["¿Cómo surgió el nombre Atenia?", "¿Por qué se eligió el nombre Atenia para el chatbot?", "¿Qué inspira el nombre Atenia?"],
+        "responses": ["El nombre Atenia fue creado a partir de la combinación de las palabras 'Atención' e 'IA', ya que mi principal objetivo es ofrecerte la mejor atención posible utilizando inteligencia artificial."]
+    },
+    {
+        "tag": "curiosidad_nombre_atenia",
+        "patterns": ["¿Es un nombre común Atenia?", "¿Por qué no otro nombre?", "¿Es especial el nombre Atenia?"],
+        "responses": ["Atenia no es un nombre común, ya que fue creado específicamente para reflejar la fusión entre la atención que ofrezco y la inteligencia artificial que utilizo para ayudarte."]
+    },
+    {
+        "tag": "quien_creo_web",
+        "patterns": ["¿Quiénes son los creadores de esta página?", "¿Quiénes hicieron este proyecto?", "¿Quiénes están detrás de este sitio web?"],
+        "responses": ["Los creadores de este proyecto somos tres estudiantes de la carrera de Ingeniería de Software de la Universidad de las Fuerzas Armadas-ESPE. Nos encargamos de desarrollar esta página con el objetivo de ofrecer soporte para estudiantes con TDAH."]
+    },
+    {
+        "tag": "integrantes_equipo",
+        "patterns": ["¿Quiénes son los integrantes de este proyecto?", "¿Quiénes son las personas que aparecen en la parte de abajo?", "¿Quiénes son los estudiantes detrás de esta página web?"],
+        "responses": ["Somos tres estudiantes de Ingeniería de Software de la Universidad de las Fuerzas Armadas-ESPE. Aparecemos en la sección 'Integrantes' al final de la página."]
+    },
+    {
+        "tag": "informacion_integrantes",
+        "patterns": ["¿Me puedes contar más sobre los creadores de esta página?", "¿Quiénes forman parte del equipo detrás de este proyecto?", "¿Cuántas personas participaron en este proyecto?"],
+        "responses": ["El proyecto fue desarrollado por tres estudiantes de la carrera de Ingeniería de Software de la Universidad de las Fuerzas Armadas-ESPE. En la parte inferior de la página, en la sección de 'Integrantes', podrás encontrar nuestros nombres."]
+    },
+    {
+        "tag": "informacion_universidad",
+        "patterns": ["¿De qué universidad son los creadores?", "¿De qué universidad provienen los creadores de este sitio?", "¿Cuál es la universidad de los creadores de esta página?"],
+        "responses": ["Somos estudiantes de la Universidad de las Fuerzas Armadas-ESPE, específicamente de la carrera de Ingeniería de Software. Esta página es parte de nuestro proyecto académico."]
+    },
+    {
+        "tag": "psicologo_aprueba_pagina",
+        "patterns": ["¿Quién es el psicólogo que aprobó esta página?", "¿Quién es la persona encargada de aprobar esta página web?", "¿Quién valida esta página web desde el punto de vista psicológico?"],
+        "responses": ["La página web ha sido aprobada por la psicóloga Auquilla Patiño Ana Lucia. Ella es Licenciada en Ciencias de la Educación con mención en Psicología Educativa y Orientación."]
+    },
+    {
+        "tag": "informacion_psicologo",
+        "patterns": ["¿Qué títulos tiene el psicólogo que aprueba esta página?", "¿Cuáles son las credenciales del psicólogo encargado?", "¿Cuál es el título del psicólogo que aprobó esta página web?"],
+        "responses": ["La psicóloga Auquilla Patiño Ana Lucia cuenta con el título de Licenciada en Ciencias de la Educación, con mención en Psicología Educativa y Orientación."]
+    },
+    {
+        "tag": "psicologo_validacion",
+        "patterns": ["¿Quién validó esta página desde el ámbito psicológico?", "¿Quién revisó esta página web para su aprobación psicológica?", "¿Qué psicólogo estuvo a cargo de validar esta página?"],
+        "responses": ["La psicóloga encargada de la validación de la página web es Auquilla Patiño Ana Lucia, quien es Licenciada en Ciencias de la Educación con mención en Psicología Educativa y Orientación."]
+    },
+    {
+        "tag": "crear_usuario",
+        "patterns": ["¿Cómo puedo crear un usuario?", "¿Cómo me registro en la página?", "¿Qué debo hacer para crear una cuenta?"],
+        "responses": ["Para crear un usuario, debes seguir estos pasos: \n1. Haz clic en la palabra 'Inicio de sesión' ubicada en la parte superior de la web, en la cabecera. \n2. Se te desplegará un formulario donde deberás ingresar tu Nombre de usuario, Correo electrónico, Contraseña y Confirmación de la contraseña. \n3. Haz clic en 'Crear cuenta'. \n¡Y listo! Tu cuenta estará creada."]
+    },
+    {
+        "tag": "registro_usuario",
+        "patterns": ["¿Dónde puedo registrarme?", "¿Cómo me registro en esta página?", "¿Cómo hago para crear una cuenta de usuario?"],
+        "responses": ["Para registrarte, debes hacer clic en 'Inicio de sesión', que se encuentra en la parte superior de la web. En el formulario que aparece, ingresa tu Nombre de usuario, Correo electrónico, y las contraseñas. Luego, haz clic en 'Crear cuenta' y tu cuenta será creada."]
+    },
+    {
+        "tag": "formulario_crear_cuenta",
+        "patterns": ["¿Qué tengo que poner en el formulario de creación de cuenta?", "¿Qué datos necesito para crear mi cuenta?", "¿Cómo completar el formulario para registrarme?"],
+        "responses": ["En el formulario de creación de cuenta, necesitas proporcionar los siguientes datos: \n- Nombre de usuario \n- Correo electrónico \n- Contraseña \n- Confirmación de la contraseña \nUna vez completados, solo debes hacer clic en 'Crear cuenta'. ¡Y tu cuenta estará lista!"]
+    },
+    {
+        "tag": "iniciar_sesion",
+        "patterns": ["¿Cómo puedo iniciar sesión?", "¿Cómo inicio sesión en la página?", "¿Qué debo hacer para entrar a mi cuenta?"],
+        "responses": ["Para iniciar sesión, sigue estos pasos: \n1. Haz clic en la palabra 'Inicio de sesión' ubicada en la parte superior de la web, en la cabecera. \n2. Se te desplegará un formulario donde deberás ingresar tu Nombre de usuario y Contraseña. \n3. Haz clic en 'Iniciar sesión'. \n¡Y listo! Habrás ingresado a tu cuenta."]
+    },
+    {
+        "tag": "login_usuario",
+        "patterns": ["¿Dónde puedo iniciar sesión?", "¿Cómo me logueo en esta página?", "¿Cómo hago para iniciar sesión?"],
+        "responses": ["Para iniciar sesión en la página, haz clic en 'Inicio de sesión' en la parte superior. Luego, ingresa tu Nombre de usuario y Contraseña en el formulario y da clic en 'Iniciar sesión'. ¡Accederás a tu cuenta enseguida!"]
+    },
+    {
+        "tag": "formulario_iniciar_sesion",
+        "patterns": ["¿Qué debo poner en el formulario para iniciar sesión?", "¿Cómo completar el formulario para iniciar sesión?", "¿Qué datos necesito para ingresar a mi cuenta?"],
+        "responses": ["En el formulario de inicio de sesión, necesitas ingresar tu Nombre de usuario y Contraseña. Luego, haz clic en 'Iniciar sesión'. ¡Y habrás accedido a tu cuenta!"]
+    },
+    {
+        "tag": "test_tda",
+        "patterns": ["¿De qué trata el test?", "¿Qué es el test que aparece en la página?", "¿Para qué sirve el test de TDAH?"],
+        "responses": ["La sección de 'Test' en la página está diseñada para ayudarte a evaluar el nivel de TDAH que podrías estar experimentando. Este test consta de 18 preguntas con 3 posibles respuestas para que selecciones o contestes. Al finalizar, un botón calculará tu nivel de TDAH, que se expresará en un porcentaje del 0 al 100%."]
+    },
+    {
+        "tag": "como_funciona_test",
+        "patterns": ["¿Cómo funciona el test?", "¿Cómo debo responder las preguntas del test?", "¿Qué debo hacer en el test?"],
+        "responses": ["El test consiste en 18 preguntas con 3 opciones de respuesta. Debes seleccionar la opción que mejor represente tu situación o experiencia. Después de responder todas las preguntas, podrás hacer clic en un botón que calculará tu nivel de TDAH, el cual se expresará en un porcentaje que va de 0 a 100%."]
+    },
+    {
+        "tag": "test_resultado",
+        "patterns": ["¿Cómo sé el resultado del test?", "¿Qué pasa después de hacer el test?", "¿Cómo ver el resultado del test de TDAH?"],
+        "responses": ["Una vez que hayas respondido todas las preguntas del test, al final verás un botón que calculará tu nivel de TDAH. El resultado aparecerá en forma de porcentaje, que va de 0 a 100%, indicando el nivel de TDAH que podrías tener según las respuestas dadas."]
+    },
+    {
+        "tag": "retos",
+        "patterns": ["¿De qué trata la sección de retos?", "¿Qué son los retos que aparecen en la página?", "¿Para qué sirven los retos de la página?"],
+        "responses": ["La sección de 'Retos' en la página está diseñada para proporcionarte una experiencia entretenida, mientras te ayuda a reducir los niveles de TDAH. Al pasar el puntero sobre la palabra 'Retos' en la cabecera, se desplegará una lista con 5 retos diferentes que podrás realizar para fomentar el enfoque y mejorar el manejo del TDAH."]
+    },
+    {
+        "tag": "como_funcionan_retos",
+        "patterns": ["¿Cómo funcionan los retos?", "¿Qué debo hacer en los retos?", "¿Cómo puedo participar en los retos?"],
+        "responses": ["Para participar en los retos, solo tienes que pasar el puntero sobre la palabra 'Retos' en la cabecera de la página. Esto desplegará una lista con 5 retos diferentes. Cada reto tiene como objetivo ayudarte a mejorar tu enfoque y reducir los niveles de TDAH, mientras disfrutas de una experiencia entretenida."]
+    },
+    {
+        "tag": "descripcion_retosa",
+        "patterns": ["¿Cuáles son los retos disponibles?", "¿Qué retos hay en la página?", "¿Cuáles son los 5 retos que puedo hacer?"],
+        "responses": ["La sección de 'Retos' ofrece 5 desafíos diseñados para ayudarte a reducir los niveles de TDAH de manera divertida. Estos retos varían, y están orientados a mejorar la concentración, la organización, y otros aspectos relacionados con el TDAH."]
+    },
+    {
+        "tag": "reto_1_descripcion",
+        "patterns": ["¿De qué trata el reto 1?", "¿Qué objetivo tiene el reto 1?", "¿En qué consiste el reto 1?", "¿Cómo funciona el reto 1?"],
+        "responses": ["El reto 1 es un 'Juego de Atención Selectiva', cuyo objetivo es ayudarte a mejorar tu capacidad de concentración y detección de detalles. En este reto, se genera una cuadrícula con varios números o imágenes, y el usuario debe encontrar el número o la figura que se busca antes de que termine el tiempo. El reto pone a prueba tu rapidez y atención a los detalles."]
+    },
+    {
+        "tag": "reto_1_detalles",
+        "patterns": ["¿Cómo funciona el Juego de Atención Selectiva?", "¿Qué debo hacer en el reto 1?", "¿Cómo juego el reto 1?", "¿En qué consiste el juego de encontrar el número o figura?"],
+        "responses": ["El reto 1 consiste en encontrar un número o una figura específica que se encuentra entre otros números o imágenes en una cuadrícula. Tienes que hacer clic en el objetivo antes de que termine el tiempo. Este ejercicio está diseñado para mejorar tu concentración y la capacidad de detectar detalles en poco tiempo."]
+    },
+    {
+        "tag": "reto_1_beneficios",
+        "patterns": ["¿Qué beneficios tiene el reto 1?", "¿Para qué me ayuda el reto 1?", "¿Qué mejoro al hacer el reto 1?"],
+        "responses": ["El reto 1 te ayudará a mejorar tu capacidad de concentración y atención selectiva, dos habilidades clave para reducir los efectos del TDAH. Al practicar este reto, mejorarás tu rapidez para detectar detalles y tu enfoque en tareas específicas, lo que puede ayudarte a gestionar mejor el TDAH."]
+    },
+    {
+        "tag": "reto_2_descripcion",
+        "patterns": ["¿De qué trata el reto 2?", "¿Qué objetivo tiene el reto 2?", "¿En qué consiste el reto 2?", "¿Cómo funciona el reto 2?"],
+        "responses": ["El reto 2 es una 'Secuencia de Memoria' basada en el clásico juego de 'Simón Dice'. El objetivo es mejorar tu memoria de trabajo y la retención de patrones. Se te mostrará una secuencia de colores o sonidos, y tendrás que repetirla correctamente. A medida que avances, la secuencia se irá haciendo más larga, lo que pondrá a prueba tu capacidad de memoria."]
+    },
+    {
+        "tag": "reto_2_detalles",
+        "patterns": ["¿Cómo funciona la Secuencia de Memoria?", "¿Qué debo hacer en el reto 2?", "¿Cómo juego el reto 2?", "¿Cómo repito la secuencia en el reto 2?"],
+        "responses": ["En el reto 2, se te mostrará una secuencia de colores o sonidos en orden. Luego, deberás repetir la secuencia correctamente. Con cada acierto, la secuencia se hará más larga y tendrás que recordarla con más precisión. Este juego es excelente para ejercitar tu memoria y mejorar tu capacidad de retener patrones."]
+    },
+    {
+        "tag": "reto_2_beneficios",
+        "patterns": ["¿Qué beneficios tiene el reto 2?", "¿Para qué me ayuda el reto 2?", "¿Qué mejoro al hacer el reto 2?"],
+        "responses": ["El reto 2 te ayudará a mejorar tu memoria de trabajo y tu capacidad para retener patrones. Al ejercitar tu memoria mediante este juego, estarás reforzando habilidades cognitivas clave para manejar el TDAH, como la concentración y la retención de información a corto plazo."]
+    },
+    {
+        "tag": "reto_3_descripcion",
+        "patterns": ["¿De qué trata el reto 3?", "¿Qué objetivo tiene el reto 3?", "¿En qué consiste el reto 3?", "¿Cómo funciona el reto 3?"],
+        "responses": ["El reto 3 es un 'Desafío Pomodoro' diseñado para mejorar la organización y el control del tiempo. Se te asignará una tarea que debes completar en un tiempo determinado, por ejemplo, 5 minutos. Puedes hacer pausas si lo necesitas, y una barra de progreso te ayudará a monitorear tu tiempo."]
+    },
+    {
+        "tag": "reto_3_detalles",
+        "patterns": ["¿Cómo funciona la Gestión del Tiempo?", "¿Qué debo hacer en el reto 3?", "¿Cómo juego el reto 3?", "¿Cómo utilizo el Desafío Pomodoro?"],
+        "responses": ["En el reto 3, debes completar una tarea dentro de un tiempo establecido. Si necesitas un descanso, puedes pausarlo. Una barra de progreso visual te indicará cuánto tiempo queda, ayudándote a administrar mejor tu tiempo y enfocarte en la actividad."]
+    },
+    {
+        "tag": "reto_3_beneficios",
+        "patterns": ["¿Qué beneficios tiene el reto 3?", "¿Para qué me ayuda el reto 3?", "¿Qué mejoro al hacer el reto 3?"],
+        "responses": ["El reto 3 te ayuda a mejorar la gestión del tiempo y la productividad. Al utilizar el método Pomodoro, puedes dividir tu trabajo en sesiones de enfoque con descansos intermedios, lo que facilita la concentración y reduce la fatiga mental."]
+    },
+    {
+        "tag": "reto_4_descripcion",
+        "patterns": ["¿De qué trata el reto 4?", "¿Qué objetivo tiene el reto 4?", "¿En qué consiste el reto 4?", "¿Cómo funciona el reto 4?"],
+        "responses": ["El reto 4 se llama 'Cazador de Distracciones' y está diseñado para entrenar la atención selectiva y evitar distracciones. En este juego, se te mostrará una lista de palabras y tu objetivo será seleccionar únicamente las palabras que sean frutas, ignorando las distracciones como imágenes llamativas, textos engañosos y sonidos inesperados."]
+    },
+    {
+        "tag": "reto_4_mecanica",
+        "patterns": ["¿Cómo se juega el reto 4?", "¿Cómo funciona Cazador de Distracciones?", "¿Qué debo hacer en el reto 4?", "¿Cómo juego el reto 4?"],
+        "responses": ["En el reto 4, verás varias palabras en la pantalla. Solo algunas de ellas son frutas, y tu tarea es seleccionarlas rápidamente antes de que acabe el tiempo. Sin embargo, habrá distractores como imágenes llamativas, textos engañosos y sonidos inesperados para desafiar tu atención."]
+    },
+    {
+        "tag": "reto_4_dificultad",
+        "patterns": ["¿Cuántos niveles tiene el reto 4?", "¿Qué dificultades hay en el reto 4?", "¿Cuánto tiempo tengo en el reto 4?", "¿Cómo cambia la dificultad en el reto 4?"],
+        "responses": ["El reto 4 tiene tres niveles de dificultad:\n- **Fácil**: 20 palabras y 30 segundos para responder.\n- **Medio**: 50 palabras y 20 segundos para responder.\n- **Difícil**: 100 palabras y solo 15 segundos para responder. \nCada nivel aumenta el desafío, requiriendo mayor rapidez y concentración."]
+    },
+    {
+        "tag": "reto_4_beneficios",
+        "patterns": ["¿Qué beneficios tiene el reto 4?", "¿Para qué me ayuda el reto 4?", "¿Qué mejoro al hacer el reto 4?"],
+        "responses": ["El reto 4 mejora tu capacidad de concentración, entrenando tu atención selectiva para identificar información relevante y evitar distracciones. Esto puede ayudarte en el día a día a mantenerte enfocado en tareas importantes y reducir la distracción causada por estímulos externos."]
+    },
+    {
+        "tag": "reto_5_descripcion",
+        "patterns": ["¿De qué trata el reto 5?", "¿Qué objetivo tiene el reto 5?", "¿En qué consiste el reto 5?", "¿Cómo funciona el reto 5?"],
+        "responses": ["El reto 5 se llama 'Evaluaciones Rápidas' y tiene como objetivo mejorar la comprensión lectora, la atención y evaluar la honestidad del usuario. Se te presentarán párrafos con títulos que deberás leer en un tiempo determinado según la dificultad elegida. Luego, se te hará una mini evaluación de 3 preguntas sobre el contenido leído."]
+    },
+    {
+        "tag": "reto_5_mecanica",
+        "patterns": ["¿Cómo se juega el reto 5?", "¿Cómo funciona Evaluaciones Rápidas?", "¿Qué debo hacer en el reto 5?", "¿Cómo juego el reto 5?"],
+        "responses": ["En el reto 5, primero leerás un texto en un tiempo límite según la dificultad elegida. Luego, se te presentarán 3 preguntas para evaluar tu comprensión del contenido. Al finalizar, podrás volver a ver el texto para comprobar tus respuestas y, finalmente, autoevaluarte otorgándote la calificación que creas haber obtenido, lo que también pone a prueba tu honestidad."]
+    },
+    {
+        "tag": "reto_5_dificultad",
+        "patterns": ["¿Cuántos niveles tiene el reto 5?", "¿Qué dificultades hay en el reto 5?", "¿Cuánto tiempo tengo en el reto 5?", "¿Cómo cambia la dificultad en el reto 5?"],
+        "responses": ["El reto 5 tiene tres niveles de dificultad:\n- **Fácil**: 100 palabras y 5 minutos para leer.\n- **Medio**: 200-300 palabras y 4 minutos para leer.\n- **Difícil**: 400 palabras o más y solo 3 minutos para leer.\nCada nivel aumenta el desafío, requiriendo mayor rapidez y comprensión."]
+    },
+    {
+        "tag": "reto_5_beneficios",
+        "patterns": ["¿Qué beneficios tiene el reto 5?", "¿Para qué me ayuda el reto 5?", "¿Qué mejoro al hacer el reto 5?"],
+        "responses": ["El reto 5 te ayuda a mejorar tu comprensión lectora, atención y capacidad de recordar información en un tiempo limitado. Además, al permitirte autoevaluar tu desempeño, también pone a prueba tu honestidad y autoconsciencia sobre tu aprendizaje."]
+    },
+    {
+        "tag": "diario_descripcion",
+        "patterns": ["¿Para qué sirve la sección Diario?", "¿Qué puedo hacer en la sección Diario?", "¿De qué trata la sección Diario?", "¿Cómo funciona el Diario?"],
+        "responses": ["La sección 'Diario' está diseñada para que los usuarios compartan su experiencia diaria, avances, inquietudes o cualquier pensamiento que deseen expresar. Es un espacio personal para reflejar cómo ha sido su día."]
+    },
+    {
+        "tag": "diario_como_usar",
+        "patterns": ["¿Cómo puedo escribir en el Diario?", "¿Cómo uso la sección Diario?", "¿Qué debo hacer para enviar mi comentario en el Diario?"],
+        "responses": ["Para escribir en la sección 'Diario', debes ingresar tu nombre de usuario, la fecha, el asunto de tu comentario y tu reflexión o experiencia del día. Luego, simplemente haz clic en 'Enviar' y tu comentario quedará registrado."]
+    },
+    {
+        "tag": "diario_requisitos",
+        "patterns": ["¿Qué datos debo ingresar en el Diario?", "¿Cuáles son los campos obligatorios en el Diario?", "¿Qué información necesito para escribir en el Diario?"],
+        "responses": ["Para escribir en el Diario, necesitas completar los siguientes campos: \n1️⃣ Nombre de usuario\n2️⃣ Fecha\n3️⃣ Asunto\n4️⃣ Comentario del día\nDespués de llenar estos campos, solo debes presionar 'Enviar'."]
+    },
+    {
+        "tag": "diario_objetivo",
+        "patterns": ["¿Por qué debería usar la sección Diario?", "¿Para qué sirve escribir en el Diario?", "¿Qué beneficios tiene la sección Diario?"],
+        "responses": ["La sección 'Diario' te ayuda a llevar un registro de tus avances, expresar tus emociones y reflexionar sobre tu día. Puede ser útil para notar mejoras en la organización, la atención y el bienestar emocional."]
+    },
+    {
+        "tag": "articulos_descripcion",
+        "patterns": ["¿Para qué sirve la sección Artículos?", "¿Qué puedo encontrar en la sección Artículos?", "¿De qué trata la sección Artículos?", "¿Qué información hay en Artículos?"],
+        "responses": ["La sección 'Artículos' presenta información detallada sobre el Trastorno por Déficit de Atención e Hiperactividad (TDAH) en adolescentes. Aquí podrás encontrar explicaciones teóricas sobre este tema para comprenderlo mejor."]
+    },
+    {
+        "tag": "articulos_contenido",
+        "patterns": ["¿Qué artículos hay en la sección?", "¿Sobre qué temas hablan los artículos?", "¿Qué información específica hay en Artículos?"],
+        "responses": ["Actualmente, la sección 'Artículos' contiene un artículo especializado sobre el TDAH en adolescentes, donde se explica de manera teórica sus causas, características y otros aspectos importantes."]
+    },
+    {
+        "tag": "articulos_objetivo",
+        "patterns": ["¿Para qué sirve leer los artículos?", "¿Qué beneficios tiene la sección Artículos?", "¿Por qué debería leer los artículos sobre TDAH?"],
+        "responses": ["Leer los artículos te permitirá conocer más a fondo el TDAH en adolescentes. Es una fuente confiable de información que te ayudará a comprender mejor este trastorno y cómo afecta la vida diaria."]
+    },
+    {
+        "tag": "clima",
+        "patterns": ["¿Qué tiempo hace hoy?", "¿Cómo está el clima?", "¿Va a llover hoy?", "¿Qué temperatura hay?"],
+        "responses": ["No tengo acceso a datos en tiempo real, pero puedes consultar una aplicación de clima para obtener información actualizada.", "Lo siento, no puedo verificar el clima, pero te recomiendo que revises tu aplicación de clima favorita."]
+    },
+    {
+        "tag": "recomendaciones_peliculas",
+        "patterns": ["¿Qué película me recomiendas?", "¿Cuál es una buena película para ver?", "¿Tienes alguna sugerencia de película?"],
+        "responses": ["Te recomiendo 'Inception', es una película fascinante. ¿Te gustan las películas de ciencia ficción?", "Si te gustan las comedias, 'The Grand Budapest Hotel' es una excelente opción."]
+    },
+    {
+        "tag": "musica",
+        "patterns": ["¿Qué música me recomiendas?", "¿Cuál es tu canción favorita?", "¿Qué tipo de música te gusta?"],
+        "responses": ["Me gusta la música que te hace sentir bien. ¿Qué tipo de música prefieres?", "Te recomiendo escuchar algo de Ed Sheeran, tiene melodías muy agradables."]
+    },
+    {
+        "tag": "libros",
+        "patterns": ["¿Qué libro me recomiendas?", "¿Cuál es un buen libro para leer?", "¿Tienes alguna sugerencia de lectura?"],
+        "responses": ["'Cien años de soledad' de Gabriel García Márquez es un clásico. ¿Te gusta la literatura latinoamericana?", "Si te gustan las novelas de misterio, 'La chica del tren' es muy interesante."]
+    },
+    {
+        "tag": "hobbies",
+        "patterns": ["¿Cuáles son tus hobbies?", "¿Qué te gusta hacer en tu tiempo libre?", "¿Tienes algún pasatiempo?"],
+        "responses": ["No tengo hobbies como tal, pero me encanta ayudar a las personas. ¿Cuáles son tus hobbies?", "Me gusta aprender sobre diferentes temas. ¿Y tú, qué disfrutas hacer en tu tiempo libre?"]
+    },
+    {
+        "tag": "comida",
+        "patterns": ["¿Cuál es tu comida favorita?", "¿Qué plato me recomiendas?", "¿Tienes alguna receta fácil?"],
+        "responses": ["No como, pero muchas personas disfrutan de la pizza. ¿Cuál es tu comida favorita?", "Una receta fácil es la ensalada César. Solo necesitas lechuga, pollo y aderezo."]
+    },
+    {
+        "tag": "ejercicio",
+        "patterns": ["¿Qué tipo de ejercicio me recomiendas?", "¿Cómo puedo mantenerme activo?", "¿Tienes consejos para hacer ejercicio?"],
+        "responses": ["Caminar es una excelente forma de mantenerse activo. ¿Te gusta salir a caminar?", "El yoga es una buena opción para relajarse y estirarse. ¿Lo has probado?"]
+    },
+    {
+        "tag": "viajes",
+        "patterns": ["¿Cuál es tu lugar favorito para viajar?", "¿Tienes recomendaciones de viaje?", "¿Qué destino me sugieres?"],
+        "responses": ["No viajo, pero muchos disfrutan de visitar lugares como París o Tokio. ¿Tienes algún destino en mente?", "Si te gusta la naturaleza, te recomendaría visitar los parques nacionales."]
+    },
+    {
+        "tag": "eventos_actuales",
+        "patterns": ["¿Qué está pasando en el mundo?", "¿Cuáles son las noticias de hoy?", "¿Hay algún evento importante?"],
+        "responses": ["No tengo acceso a noticias en tiempo real, pero puedes consultar un sitio de noticias para estar al tanto.", "Te recomiendo que revises un sitio de noticias confiable para obtener información actualizada."]
+    },
+    {
+        "tag": "consejos_estudio",
+        "patterns": ["¿Tienes consejos para estudiar?", "¿Cómo puedo mejorar mis hábitos de estudio?", "¿Qué técnicas de estudio me recomiendas?"],
+        "responses": ["Establecer un horario de estudio puede ser muy útil. ¿Tienes un lugar tranquilo para estudiar?"]
+    },
+    {
+        "tag": "mascotas",
+        "patterns": ["¿Tienes mascotas?", "¿Cuál es tu animal favorito?", "¿Qué opinas de los perros?", "¿Te gustan los gatos?"],
+        "responses": ["No tengo mascotas, pero muchas personas adoran a los perros y gatos. ¿Tienes alguna mascota?", "Los perros son conocidos como los mejores amigos del hombre. ¿Tienes un perro o un gato?"]
+    },
+    {
+        "tag": "tecnologia",
+        "patterns": ["¿Cuál es tu gadget favorito?", "¿Qué opinas de la tecnología?", "¿Tienes alguna recomendación de tecnología?"],
+        "responses": ["La tecnología avanza rápidamente y puede ser muy útil. ¿Tienes algún dispositivo que te guste?", "Los smartphones son herramientas muy versátiles. ¿Cuál es tu marca favorita?"]
+    },
+    {
+        "tag": "salud",
+        "patterns": ["¿Cómo puedo mantenerme saludable?", "¿Tienes consejos de salud?", "¿Qué debo hacer para estar en forma?"],
+        "responses": ["Mantener una dieta equilibrada y hacer ejercicio regularmente es clave. ¿Tienes alguna rutina de ejercicios?", "Beber suficiente agua y dormir bien son fundamentales para la salud. ¿Cómo te cuidas?"]
+    },
+    {
+        "tag": "noticias",
+        "patterns": ["¿Qué hay de nuevo en las noticias?", "¿Cuáles son las últimas noticias?", "¿Qué está pasando en el mundo?"],
+        "responses": ["No tengo acceso a noticias en tiempo real, pero puedes consultar un sitio de noticias para estar al tanto.", "Te recomiendo que revises un sitio de noticias confiable para obtener información actualizada."]
+    },
+    {
+        "tag": "cultura",
+        "patterns": ["¿Qué sabes sobre la cultura de [país]?", "¿Cuáles son las tradiciones de [país]?", "¿Qué me puedes contar sobre la cultura?"],
+        "responses": ["Cada país tiene su propia cultura y tradiciones. ¿Hay algún país en particular que te interese?", "La cultura es fascinante y diversa. ¿Te gustaría saber sobre la cultura de algún lugar específico?"]
+    },
+    {
+        "tag": "juegos",
+        "patterns": ["¿Cuál es tu videojuego favorito?", "¿Qué juegos me recomiendas?", "¿Te gustan los juegos de mesa?"],
+        "responses": ["No juego, pero muchos disfrutan de juegos como 'The Legend of Zelda' o 'Minecraft'. ¿Cuál es tu videojuego favorito?", "Los juegos de mesa son una excelente manera de socializar. ¿Tienes alguno que te guste?"]
+    },
+    {
+        "tag": "moda",
+        "patterns": ["¿Qué opinas de la moda?", "¿Tienes consejos de moda?", "¿Cuál es tu estilo favorito?"],
+        "responses": ["La moda es una forma de expresión personal. ¿Tienes un estilo que te guste?", "Siempre es bueno vestirse de manera cómoda y que te haga sentir bien. ¿Cuál es tu prenda favorita?"]
+    },
+    {
+        "tag": "finanzas",
+        "patterns": ["¿Tienes consejos para ahorrar dinero?", "¿Cómo puedo manejar mejor mis finanzas?", "¿Qué opinas sobre invertir?"],
+        "responses": ["Hacer un presupuesto es un buen primer paso para manejar tus finanzas. ¿Tienes algún objetivo de ahorro?", "Invertir puede ser una buena manera de hacer crecer tu dinero, pero es importante informarse bien. ¿Te interesa aprender sobre inversiones?"]
+    },
+    {
+        "tag": "relaciones",
+        "patterns": ["¿Cómo puedo mejorar mis relaciones?", "¿Tienes consejos para hacer amigos?", "¿Qué opinas sobre las relaciones a distancia?"],
+        "responses": ["La comunicación es clave en cualquier relación. ¿Tienes alguna relación que te gustaría mejorar?", "Las relaciones a distancia pueden ser desafiantes, pero con esfuerzo y comunicación se pueden mantener. ¿Tienes amigos lejanos?"]
+    },
+    {
+        "tag": "estilo_de_vida",
+        "patterns": ["¿Qué estilo de vida es el mejor?", "¿Cómo puedo llevar un estilo de vida más saludable?", "¿Tienes consejos para un estilo de vida equilibrado?"],
+        "responses": ["Un estilo de vida equilibrado incluye ejercicio, buena alimentación y tiempo para relajarse. ¿Qué haces para cuidar de ti mismo?", "Es importante encontrar un equilibrio entre trabajo y tiempo personal. ¿Cómo manejas tu tiempo?"]
+    },
+    {
+        "tag": "citas",
+        "patterns": ["¿Tienes alguna cita inspiradora?", "Dame una frase motivacional", "¿Cuál es tu cita favorita?"],
+        "responses": ["\"La vida es 10% lo que me sucede y 90% cómo reacciono a ello.\" - Charles R. Swindoll", "\"El único modo de hacer un gran trabajo es amar lo que haces.\" - Steve Jobs"]
+    },
+    {
+        "tag": "hobbies_nuevos",
+        "patterns": ["¿Qué nuevos hobbies puedo probar?", "¿Tienes ideas para nuevos pasatiempos?", "¿Qué actividades nuevas me recomiendas?"],
+        "responses": ["Podrías probar la jardinería, es muy relajante. ¿Te gusta la naturaleza?", "La fotografía es un gran hobby que te permite capturar momentos. ¿Te interesa?"]
+    },
+    {
+        "tag": "cocina",
+        "patterns": ["¿Tienes recetas fáciles?", "¿Qué puedo cocinar hoy?", "¿Cuál es un plato sencillo que puedo hacer?"],
+        "responses": ["Una pasta al pesto es rápida y deliciosa. Solo necesitas pasta, albahaca, piñones y aceite de oliva.", "Un salteado de verduras es fácil de hacer y muy saludable. ¿Te gustaría una receta específica?"]
+    },
+    {
+        "tag": "consejos_de_vida",
+        "patterns": ["¿Qué consejos de vida me darías?", "¿Tienes algún consejo para ser más feliz?", "¿Cómo puedo mejorar mi vida?"],
+        "responses": ["Practicar la gratitud diariamente puede ayudarte a ver lo positivo en la vida. ¿Has probado llevar un diario de gratitud?", "Establecer metas pequeñas y alcanzables puede hacer una gran diferencia. ¿Tienes alguna meta en mente?"]
+    },
+    {
+        "tag": "ciencia",
+        "patterns": ["¿Qué descubrimientos científicos recientes conoces?", "¿Tienes datos curiosos sobre ciencia?", "¿Qué opinas sobre la ciencia?"],
+        "responses": ["La ciencia está en constante evolución. ¿Te interesa algún campo en particular, como la biología o la física?", "Un dato curioso: ¡las abejas pueden reconocer rostros humanos! ¿Te gustaría saber más sobre la naturaleza?"]
+    },
+    {
+        "tag": "filosofia",
+        "patterns": ["¿Qué es la filosofía?", "¿Tienes alguna idea filosófica interesante?", "¿Qué filósofo me recomiendas leer?"],
+        "responses": ["La filosofía es el estudio de las preguntas fundamentales sobre la existencia, el conocimiento y la moral. ¿Te interesa algún filósofo en particular?", "Te recomiendo leer a Sócrates, sus ideas sobre la ética son muy influyentes."]
+    },
+    {
+        "tag": "cuidado_personal",
+        "patterns": ["¿Qué puedo hacer para cuidar mejor de mí mismo?", "¿Tienes consejos de autocuidado?", "¿Cómo puedo relajarme?"],
+        "responses": ["Tomarte un tiempo para ti mismo es esencial. Podrías intentar meditar o leer un buen libro. ¿Qué te gusta hacer para relajarte?", "Un baño caliente o una caminata al aire libre pueden ser muy reconfortantes. ¿Tienes alguna rutina de autocuidado?"]
+    },
+    {
+        "tag": "tecnologia_nueva",
+        "patterns": ["¿Cuáles son las últimas tendencias en tecnología?", "¿Qué gadgets nuevos hay en el mercado?", "¿Qué opinas sobre la inteligencia artificial?"],
+        "responses": ["La inteligencia artificial está revolucionando muchas industrias. ¿Te gustaría saber más sobre sus aplicaciones?", "Los dispositivos de realidad virtual están ganando popularidad. ¿Te interesa la realidad virtual?"]
+    },
+    {
+        "tag": "eventos_futuros",
+        "patterns": ["¿Qué eventos importantes se acercan?", "¿Hay algún festival o celebración próximamente?", "¿Qué eventos culturales me recomiendas?"],
+        "responses": ["Los festivales de música son muy populares en verano. ¿Te gusta la música en vivo?", "Las ferias de libros son una excelente manera de descubrir nuevos autores. ¿Te gusta leer?"]
+    },
+    {
+        "tag": "chiste_general",
+        "patterns": ["Cuéntame un chiste", "Dime un chiste", "¿Tienes un chiste para mí?", "Hazme reír"],
+        "responses": ["¿Por qué los pájaros no usan Facebook? Porque ya tienen Twitter.", "¿Qué hace una abeja en el gimnasio? Zum-ba."]
+    },
+    {
+        "tag": "chiste_animales",
+        "patterns": ["Cuéntame un chiste de animales", "Dime un chiste sobre perros", "¿Tienes un chiste de gatos?"],
+        "responses": ["¿Por qué los perros no pueden usar computadoras? Porque les da miedo el ratón.", "¿Qué hace un pez? ¡Nada!"]
+    },
+    {
+        "tag": "chiste_de_escuela",
+        "patterns": ["Cuéntame un chiste de escuela", "Dime un chiste sobre profesores", "¿Tienes un chiste de estudiantes?"],
+        "responses": ["¿Por qué estaba el libro de matemáticas tan estresado? Porque tenía demasiados problemas.", "¿Qué le dice un semáforo a otro? ¡No me mires, estoy cambiando!"]
+    },
+    {
+        "tag": "chiste_de_comida",
+        "patterns": ["Cuéntame un chiste de comida", "Dime un chiste sobre pizza", "¿Tienes un chiste de hamburguesas?"],
+        "responses": ["¿Por qué la escoba está feliz? Porque ba-rriendo.", "¿Qué le dice una tortilla a otra? ¡Eres un poco plana!"]
+    },
+    {
+        "tag": "chiste_de_tecnologia",
+        "patterns": ["Cuéntame un chiste de tecnología", "Dime un chiste sobre computadoras", "¿Tienes un chiste de robots?"],
+        "responses": ["¿Por qué los programadores confunden Halloween y Navidad? Porque Oct 31 = Dec 25.", "¿Qué hace un teléfono en la playa? ¡Llamadas de atención!"]
+    },
+    {
+        "tag": "chiste_de_familia",
+        "patterns": ["Cuéntame un chiste de familia", "Dime un chiste sobre padres", "¿Tienes un chiste de hermanos?"],
+        "responses": ["¿Por qué los padres siempre llevan un lápiz a la cama? Porque quieren dibujar sueños.", "¿Qué le dice un hermano a otro? ¡Eres tan molesto que deberías ser un anuncio de detergente!"]
+    },
+    {
+        "tag": "chiste_de_viajes",
+        "patterns": ["Cuéntame un chiste de viajes", "Dime un chiste sobre aviones", "¿Tienes un chiste de vacaciones?"],
+        "responses": ["¿Por qué los pájaros no usan maletas? Porque ya tienen alas.", "¿Qué hace una vaca en un avión? ¡Leche voladora!"]
+    },
+    {
+        "tag": "recomendacion_estrategias_estrés",
+        "patterns": ["¿Cómo puedo manejar el estrés?", "Dame consejos para reducir el estrés", "¿Qué puedo hacer cuando estoy estresado?"],
+        "responses": ["Practica la respiración profunda: inhala contando hasta cuatro, mantén la respiración contando hasta cuatro y exhala contando hasta cuatro.", "Dedica tiempo a actividades que disfrutes, como leer, escuchar música o hacer ejercicio. Esto puede ayudarte a relajarte."]
+    },
+    {
+        "tag": "recomendacion_meditacion",
+        "patterns": ["¿Cómo puedo empezar a meditar?", "Dame consejos sobre meditación", "¿Qué técnicas de meditación me recomiendas?"],
+        "responses": ["Comienza con solo cinco minutos al día. Encuentra un lugar tranquilo, cierra los ojos y concéntrate en tu respiración.", "Prueba la meditación guiada. Hay muchas aplicaciones y videos en línea que pueden ayudarte a comenzar."]
+    },
+    {
+        "tag": "recomendacion_diario_emocional",
+        "patterns": ["¿Cómo puedo llevar un diario emocional?", "Dame consejos para escribir un diario", "¿Qué debo incluir en mi diario emocional?"],
+        "responses": ["Escribe sobre tus emociones diariamente. Pregúntate cómo te sientes y por qué.", "Incluye gratitud en tu diario. Anota tres cosas por las que estés agradecido cada día."]
+    },
+    {
+        "tag": "recomendacion_autocuidado",
+        "patterns": ["¿Qué es el autocuidado?", "Dame consejos de autocuidado", "¿Cómo puedo cuidar mejor de mí mismo?"],
+        "responses": ["Dedica tiempo a actividades que te hagan sentir bien, como un baño relajante, leer un libro o practicar un hobby.", "Asegúrate de dormir lo suficiente y mantener una alimentación equilibrada. Tu bienestar físico afecta tu salud mental."]
+    },
+    {
+        "tag": "recomendacion_terapia",
+        "patterns": ["¿Cuándo debería considerar la terapia?", "Dame consejos sobre buscar ayuda profesional", "¿Qué tipo de terapia me recomendarías?"],
+        "responses": ["Si sientes que tus emociones son abrumadoras o interfieren con tu vida diaria, considera hablar con un profesional.", "La terapia cognitivo-conductual es efectiva para muchas personas. Habla con un terapeuta sobre tus opciones."]
+    },
+    {
+        "tag": "recomendacion_actividades_relajantes",
+        "patterns": ["¿Qué actividades me recomiendas para relajarme?", "Dame ideas para relajarme", "¿Cómo puedo desconectar y relajarme?"],
+        "responses": ["Prueba el yoga o el tai chi. Ambas prácticas combinan movimiento y meditación, lo que puede ayudarte a relajarte.", "Escuchar música suave o sonidos de la naturaleza puede ser muy relajante. ¿Tienes alguna lista de reproducción favorita?"]
+    },
+    {
+        "tag": "recomendacion_organizacion",
+        "patterns": ["¿Cómo puedo organizar mejor mi tiempo?", "Dame consejos para ser más organizado", "¿Qué técnicas de organización me recomiendas?"],
+        "responses": ["Usa una lista de tareas diarias. Anota lo que necesitas hacer y prioriza las tareas más importantes.", "Establece un horario y asigna bloques de tiempo para cada actividad. Esto puede ayudarte a mantenerte enfocado."]
+    },
+    {
+        "tag": "recomendacion_comunicacion",
+        "patterns": ["¿Cómo puedo mejorar mi comunicación?", "Dame consejos para comunicarme mejor", "¿Qué puedo hacer para expresar mis sentimientos?"],
+        "responses": ["Practica la escucha activa: presta atención a lo que la otra persona dice antes de responder.", "Usa 'yo' en lugar de 'tú' al expresar tus sentimientos. Por ejemplo, di 'me siento frustrado' en lugar de 'tú me frustras'."]
+    },
+    {
+        "tag": "recomendacion_positividad",
+        "patterns": ["¿Cómo puedo ser más positivo?", "Dame consejos para mantener una actitud positiva", "¿Qué puedo hacer para ver el lado bueno de las cosas?"],
+        "responses": ["Practica la gratitud diariamente. Anota tres cosas buenas que te sucedieron cada día.", "Rodeate de personas positivas y evita la negatividad. La energía de quienes te rodean puede influir en tu estado de ánimo."]
+    },
+    {
+        "tag": "recomendacion_empatía",
+        "patterns": ["¿Cómo puedo ser más empático?", "Dame consejos para entender mejor a los demás", "¿Qué puedo hacer para mejorar mi empatía?"],
+        "responses": ["Intenta ponerte en el lugar de la otra persona. Pregúntate cómo te sentirías en su situación.", "Escucha sin juzgar. A veces, solo escuchar a alguien puede ser muy valioso para ellos."]
+    },
+    {
+        "tag": "recomendacion_ejercicio",
+        "patterns": ["¿Cómo puede ayudar el ejercicio con el TDAH?", "Dame consejos de ejercicio para reducir el TDAH", "¿Qué tipo de ejercicio es bueno para el TDAH?"],
+        "responses": ["Hacer ejercicio regularmente puede ayudar a reducir la hiperactividad y mejorar la concentración. Prueba actividades como correr, nadar o practicar deportes de equipo.", "El ejercicio al aire libre también es beneficioso. La luz del sol y la naturaleza pueden mejorar tu estado de ánimo y reducir los síntomas del TDAH."]
+    },
+    {
+        "tag": "recomendacion_organizacion",
+        "patterns": ["¿Cómo puedo organizarme mejor para el TDAH?", "Dame consejos para mantenerme organizado", "¿Qué técnicas de organización me recomiendas para el TDAH?"],
+        "responses": ["Utiliza listas de tareas y calendarios para mantener un seguimiento de tus actividades. Anota las tareas más importantes y establece plazos.", "Crea un espacio de trabajo ordenado y libre de distracciones. Mantén solo lo necesario en tu escritorio para evitar la sobrecarga sensorial."]
+    },
+    {
+        "tag": "recomendacion_habitos_sueño",
+        "patterns": ["¿Cómo afecta el sueño al TDAH?", "Dame consejos para mejorar mi sueño", "¿Qué puedo hacer para dormir mejor con TDAH?"],
+        "responses": ["Establece una rutina de sueño regular. Acostarte y levantarte a la misma hora todos los días puede mejorar la calidad de tu sueño.", "Evita la cafeína y las pantallas antes de dormir. Opta por actividades relajantes como leer o meditar."]
+    },
+    {
+        "tag": "recomendacion_tiempo_fuera",
+        "patterns": ["¿Cómo puedo tomar descansos efectivos?", "Dame consejos para hacer pausas", "¿Qué puedo hacer durante mis descansos para el TDAH?"],
+        "responses": ["Toma descansos cortos y regulares durante el trabajo o el estudio. Levántate, estírate o da un paseo para despejar la mente.", "Practica la meditación o ejercicios de respiración durante tus pausas para reducir la ansiedad y mejorar la concentración."]
+    },
+    {
+        "tag": "recomendacion_estrategias_tiempo",
+        "patterns": ["¿Cómo puedo gestionar mejor mi tiempo?", "Dame consejos para administrar el tiempo con TDAH", "¿Qué técnicas de gestión del tiempo me recomiendas?"],
+        "responses": ["Utiliza temporizadores para dividir las tareas en intervalos manejables. Trabaja durante 25 minutos y luego toma un descanso de 5 minutos.", "Establece recordatorios para las tareas y citas importantes. Usa aplicaciones o alarmas para mantenerte en el camino."]
+    },
+    {
+        "tag": "recomendacion_ambiente_trabajo",
+        "patterns": ["¿Cómo puedo mejorar mi entorno de trabajo?", "Dame consejos para un espacio de trabajo adecuado para el TDAH", "¿Qué debo considerar en mi ambiente de trabajo?"],
+        "responses": ["Minimiza las distracciones en tu espacio de trabajo. Usa auriculares con cancelación de ruido o música suave para ayudarte a concentrarte.", "Asegúrate de que tu lugar de trabajo esté bien iluminado y ventilado. Un ambiente cómodo puede mejorar tu productividad."]
+    },
+    {
+        "tag": "recomendacion_terapia",
+        "patterns": ["¿Cuándo debería considerar la terapia para el TDAH?", "Dame consejos sobre buscar ayuda profesional", "¿Qué tipo de terapia es efectiva para el TDAH?"],
+        "responses": ["La terapia cognitivo-conductual puede ser útil para aprender a manejar los síntomas del TDAH. Considera hablar con un terapeuta especializado.", "Si sientes que tus síntomas son abrumadores, no dudes en buscar ayuda profesional. Un terapeuta puede ofrecerte estrategias personalizadas."]
+    },
+    {
+        "tag": "recomendacion_alimentacion",
+        "patterns": ["¿Cómo afecta la dieta al TDAH?", "Dame consejos sobre alimentación para el TDAH", "¿Qué alimentos son buenos para el TDAH?"],
+        "responses": ["Mantén una dieta equilibrada rica en frutas, verduras, proteínas y granos integrales. Evita los azúcares y alimentos procesados que pueden agravar los síntomas.", "Considera la posibilidad de incluir ácidos grasos omega-3 en tu dieta, que se encuentran en pescados como el salmón y en nueces."]
+    },
+    {
+        "tag": "recomendacion_estrategias_autoayuda",
+        "patterns": ["¿Qué estrategias de autoayuda son efectivas para el TDAH?", "Dame consejos de autoayuda para el TDAH", "¿Qué puedo hacer por mi cuenta para manejar el TDAH?"],
+        "responses": ["Practica la auto-compasión. Reconoce que el TDAH es una condición y no un defecto personal. Sé amable contigo mismo en los momentos difíciles.", "Establece metas pequeñas y alcanzables. Celebrar los logros, por pequeños que sean, puede motivarte a seguir adelante."]
+    },
+    {
+        "tag": "recomendacion_apoyo_social",
+        "patterns": ["¿Cómo puede ayudar el apoyo social con el TDAH?", "Dame consejos sobre cómo buscar apoyo", "¿Qué grupos de apoyo son útiles para el TDAH?"],
+        "responses": ["Conéctate con grupos de apoyo para personas con TDAH. Compartir experiencias y estrategias con otros puede ser muy beneficioso.", "Habla con amigos y familiares sobre tu situación. Tener un sistema de apoyo puede ayudarte a sentirte menos solo y más comprendido."]
+    }
+]
+}
